@@ -6,22 +6,63 @@ html, body {
 
 h1 {
   font-size: 36px;
-  text-align: center;
+ text-align: center;
 }
 
 .header {
-  height: 400px;
+  height: 450px;
   width: 100%;
   background-color: rgb(8, 86, 142);
-  padding-top: 100px
+  padding-top: 10px;
+  text-align: center;
+
+  background-image: linear-gradient(to bottom,#314d73 0,#4c6790 100%);
+
 }
 
 .header h1 {
   color: #fff;
   font-size: 62;
+  padding-top: 150px;
 }
+
+.header .btn {
+  padding: 10px 30px 10px 30px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  position: relative;
+  margin-top: 20px;
+}
+
+.header .btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .btn:hover {
+  background-color: rgb(62, 128, 170);
+  border: 0px;
+  -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+}
+
+.header ul {
+  float: right;
+  color:inherit;
+}
+
+.header li {
+  color: #fff;
+}
+
 
 .container {
   max-width: 940px;
   margin: 0 auto;
+
 }
