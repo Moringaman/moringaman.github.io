@@ -13,6 +13,12 @@ h1 {
   height: 400px;
   width: 100%;
   background-color: rgb(8, 86, 142);
+  padding-top: 100px
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 62;
 }
 
 .container {
