@@ -3,6 +3,11 @@ html, body {
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
+  background:url('img/water-768745_1280.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 h1 {
@@ -13,11 +18,9 @@ h1 {
 .header {
   height: 450px;
   width: 100%;
-  background-color: rgb(8, 86, 142);
   padding-top: 10px;
   padding-right: 10px;
   text-align: center;
-
   background-image: linear-gradient(to bottom,#314d73 0,#4c6790 100%);
 
 }
