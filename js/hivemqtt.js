@@ -1,4 +1,4 @@
-$("#btnSub").prop("disabled", true);
+
 //Using the HiveMQ public Broker, with a random client Id
 var client = new Messaging.Client("localhost", 9001, "myclientid_" + parseInt(Math.random() * 100, 10));
 

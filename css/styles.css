@@ -81,6 +81,7 @@ text-shadow: 0 2px 3px rgba(0,0,0,.4);
 .container-fluid {
   width: 70%;
   margin: 0 auto;
+  text-align:center;
 
 }
 
@@ -115,16 +116,18 @@ height: 50px;
     
 .messages {
     text-align: center;
-    width:auto;
+    width: 100%;
     height: 100px;
-    margin:auto;
-    background-color: rgb(8, 86, 142);
+    margin: auto;
+  /*  background-color: rgb(8, 86, 142);*/
     color:#FFFFFF;
+    padding: 20px;
+    background-image: linear-gradient(to bottom,#314d73 0,#4c6790 100%);
     }
 
 #messages {
     Font-family: 'Open Sans' sans-serif;
-    
+    font-size: 32px
 }
 
 @media (max-width: 800px) {
