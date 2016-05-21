@@ -19,6 +19,9 @@ client.onConnectionLost = function (responseObject) {
 client.onMessageArrived = function (message) {
     //Do something with the push message you received
     $('#messages').html('<span>Topic:<span> ' + message.destinationName + '  | ' + message.payloadString + '</span><br/>');
+    
+    $('#btnCon').text(' ' + message.payloadString + ' ' );
+  $("#btnCon").css("font-size" ,"42px");
 };
 
 //Connect Options

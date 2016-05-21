@@ -5,6 +5,10 @@
 <!-- Optional theme -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+    
+    
 <script src="https://use.fontawesome.com/68df07d019.js"></script>
     <script src="js/mqttws31.js"></script>
 <script src="js/hivemqtt.js"></script>
@@ -39,7 +43,7 @@
       </div>
     </div>
 
-    <div class="main">
+ <!--   <div class="main">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -55,21 +59,26 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="container buttons">
+    <div class="container-fluid buttons">
       <div class="row">
+        
+            
         <div class="col-md-4">
             
-      <!--    <button class="btn" onclick="client.connect(options);">CONNECT</button> -->
-            <button class="btn" id="btnCon" onclick="mqttconnect();">CONNECT</button>
+            <button class="btn1" id="btnCon" onclick="mqttconnect();">CONNECT</button>
         </div>
+        
         <div class="col-md-4">
-          <button class="btn" onclick="client.disconnect();">Disconnect</button>
+          <button class="btn1" onclick="client.disconnect();">DISCONNECT</button>
         </div>
+         
         <div class="col-md-4">
-          <button class="btn" id ="btnSub"onclick="subscribe();">Subscribe</button>
+          <button class="btn1" id ="btnSub"onclick="subscribe();">SUBSCRIIBE</button>
         </div>
+      
+         
       </div>
     </div>
 
