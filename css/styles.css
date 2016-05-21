@@ -85,7 +85,7 @@ text-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 
 .main {
-  Height: 500px;
+  Height: 200px;
   padding-top: 100px;
   text-align: center;
   width: 100%;
@@ -94,19 +94,38 @@ text-shadow: 0 2px 3px rgba(0,0,0,.4);
 .container {
   text-align: center;
   width: 100%;
-  margin: 0 auto;
-
+  margin: auto;
+  height: 50px;
 }
 
 .circle {
   height: 100px;
   width:100px;
   background-color: rgb(8, 86, 142);
-  border-radius: 100%;
+  border-radius: 50%;
 
 }
 
+.container buttons {
+  text-align: center;
+  width: 100%;
+height: 50px;
+  margin: 0 auto;
+}
+    
+.messages {
+    text-align: center;
+    width:auto;
+    height: 100px;
+    margin:auto;
+    background-color: rgb(8, 86, 142);
+    color:#FFFFFF;
+    }
 
+#messages {
+    Font-family: 'Open Sans' sans-serif;
+    
+}
 
 @media (max-width: 800px) {
   .header {

@@ -3,10 +3,22 @@
 <link type="text/css" rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Optional theme -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <script src="https://use.fontawesome.com/68df07d019.js"></script>
+    <script src="js/mqttws31.js"></script>
+<script src="js/hivemqtt.js"></script>
+    
+    <script typ="text/jscript">
+     $(document).ready(function(){
+          $("#btnSub").prop("disabled", true);
+         
+     });  
+   
+    </script>
+    
   <head>
-    <title></title>
+    <title>FEEDBAG PRO</title>
   </head>
   <body>
     <div class="header">
@@ -21,7 +33,7 @@
 
 
 
-        <h1> FEEDBAG 2.0</h1>
+        <h1>FEEDBAG 2.0</h1>
         <h3>Enhancing your performance at all levels of participation with Iot sensor enabled devices.</h3>
       <a href="#" class="btn">Learn More</a>
       </div>
@@ -45,8 +57,38 @@
       </div>
     </div>
 
+    <div class="container buttons">
+      <div class="row">
+        <div class="col-md-4">
+            
+      <!--    <button class="btn" onclick="client.connect(options);">CONNECT</button> -->
+            <button class="btn" id="btnCon" onclick="mqttconnect();">CONNECT</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn" onclick="client.disconnect();">Disconnect</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn" id ="btnSub"onclick="subscribe();">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid messages">
+      <div class="row">
+
+        <div class="col-md-6">
+       <div id="messages"></div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Latest compiled and minified JavaScript -->
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>
