@@ -3,24 +3,24 @@
 <link type="text/css" rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Optional theme -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 
-    
-    
+
+
 <script src="https://use.fontawesome.com/68df07d019.js"></script>
     <script src="js/mqttws31.js"></script>
 <script src="js/hivemqtt.js"></script>
-    
+
     <script typ="text/jscript">
      $(document).ready(function(){
           $("#btnSub").prop("disabled", true);
-         
-     });  
-   
+
+     });
+
     </script>
-    
+
   <head>
     <title>FEEDBAG PRO</title>
   </head>
@@ -60,25 +60,70 @@
         </div>
       </div>
     </div> -->
+<div class ="container-fluid" id="Options">
 
+
+
+
+
+
+
+    <form class="form-inline">
+      <div class="form-group">
+        <p><span>Step 1.</span>Enter Bag Number</p>
+        <label for="BagNo" >Bag No.</label>
+        <input type="text" class="form-control" id="BagNo" placeholder="Enter Bag Number">
+
+      </div>
+
+      <div class="form-group">
+        <p><span>Step 2.</span>Enter Bag Number</p>
+        <label for="Routine" >Bag Routine</label>
+        <select class="form-control">
+          <option>Warm up</option>
+          <option>Beginner Challenge</option>
+          <option>3 round-interval</option>
+          <option>technical puch combinations</option>
+          <option>Full 8 round challenge</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <p><span>Step 3.</span>Select Stance</p>
+        <div class="radio">
+  <label class="radio-inline">
+    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> South Paw
+  </label>
+  <label class ="radio-inline">
+    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> Orthodox
+  </label>
+</div>
+      </div>
+   </form>
+
+ </div>
+
+
+
+</div>
     <div class="container-fluid buttons">
       <div class="row">
-        
-            
+
+
         <div class="col-md-4">
-            
+
             <button class="btn1" id="btnCon" onclick="mqttconnect();">CONNECT</button>
         </div>
-        
-        <div class="col-md-4">
+
+        <div class="col-md-4 ">
           <button class="btn1" onclick="client.disconnect();">DISCONNECT</button>
         </div>
-         
-        <div class="col-md-4">
+
+        <div class="col-md-4 ">
           <button class="btn1" id ="btnSub"onclick="subscribe();">SUBSCRIIBE</button>
         </div>
-      
-         
+
+
       </div>
     </div>
 
@@ -97,7 +142,7 @@
 
 
     <!-- Latest compiled and minified JavaScript -->
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>

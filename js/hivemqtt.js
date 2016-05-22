@@ -5,7 +5,7 @@ var client = new Messaging.Client("localhost", 9001, "myclientid_" + parseInt(Ma
 // Connect the client, with a Username and Password
 function mqttconnect(){
 client.connect({onSuccess:onConnect, userName : 'hass', password : 'hasspass'});
-  $("#btnCon").prop("disabled", true); 
+  $("#btnCon").prop("disabled", true);
     $("#btnSub").prop("disabled", false);
 }
 //Gets  called if the websocket/mqtt connection gets disconnected for any reason
@@ -19,10 +19,26 @@ client.onConnectionLost = function (responseObject) {
 client.onMessageArrived = function (message) {
     //Do something with the push message you received
     $('#messages').html('<span>Topic:<span> ' + message.destinationName + '  | ' + message.payloadString + '</span><br/>');
-    
+
     $('#btnCon').text(' ' + message.payloadString + ' ' );
   $("#btnCon").css("font-size" ,"42px");
+//  $("#btnCon").fadeToggle("slow");
+  var divName = "#btnCon";
+//  $(divName).css("background-color", "#fff");
+  anime(divName);
 };
+
+//button animation function
+
+var anime = (function(divName){
+        var div = (divName);
+        console.log(div);
+
+        $(div).animate({opacity: '0.1'}, "slow");
+        $(div).animate({opacity: '0.8'}, "slow");
+        $(div).animate({opacity: '0.1'}, "slow");
+        $(div).animate({opacity: '0.8'}, "slow");
+    });
 
 //Connect Options
 var options = {
@@ -56,4 +72,3 @@ function onConnect(){
 function subscribe(){
     client.subscribe('/outside/temp');
 };
-
